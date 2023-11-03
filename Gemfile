@@ -72,3 +72,8 @@ group :test do
 end
 
 gem 'pry-rails'
+
+# postgreSQLを使用するためのGem
+group :production do
+  gem 'pg'
+end
