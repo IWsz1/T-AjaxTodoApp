@@ -37,6 +37,7 @@ function post (){
       // ステータスが200以外だったら何らかの通信エラー
       if (XHR.status != 200) {
         // アラートでステータスコードと通信エラーに関するテキストを表示
+        // ダブルクォーテーションでもシングルクォーテーションでもない！
         alert(`Error ${XHR.status}: ${XHR.statusText}`);
         // jsの処理から強制的に抜ける
         return null;
