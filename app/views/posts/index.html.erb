@@ -1,12 +1,14 @@
 <h1>AjaxApp</h1>
 <%= form_with url:  "/posts", method: :post,id: "form" do |form| %>
-  <%= form.text_field :content %>
+  <%= form.text_field :content , id: "content"  %>
   <%= form.submit '投稿する' , id: "submit" %>
 <% end %>
 
 <div id="list">
 </div>
+<%# リロードするまでの追加はid="list"の後ろに順次配置される %>
 
+<%# リロードするとDBから下記が作成される %>
 <% @posts.each do |post| %>
 <div class="post">
   <div class="post-date">
